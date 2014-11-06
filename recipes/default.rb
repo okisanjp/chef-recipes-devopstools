@@ -26,6 +26,9 @@ end
 end
 
 # yum-cronを入れておく
+package "yum-cron" do
+	action :upgrade
+end
 service "yum-cron" do
   action [ :enable, :start ]
 end
